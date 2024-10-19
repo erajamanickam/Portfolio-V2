@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Readex Pro Regular";
+    src: url("assets/fonts/ReadexPro-Light.ttf");
+}
+
+@font-face {
+    font-family: "Readex Pro Bold";
+    src: url("assets/fonts/ReadexPro-Bold.ttf");
+}
+
+body {
+    font-family: "Readex Pro Regular";
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

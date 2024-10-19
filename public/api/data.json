@@ -1,0 +1,218 @@
+{
+    "menu": [
+        {
+            "name": "Skills",
+            "link": "skills"
+        },
+        {
+            "name": "Experience",
+            "link": "experience"
+        },
+        {
+            "name": "Projects",
+            "link": "projects"
+        },
+        {
+            "name": "About",
+            "link": "about"
+        },
+        {
+            "name": "Contact",
+            "link": "contact"
+        }
+    ],
+    "hero": {
+        "section_body": {
+            "title": "Without using <span class=\"text-[#61DAFB] bg-gradient-to-l from-red-600 to-violet-600 text-transparent bg-clip-text\">Custom CSS</span> <br />Tailwind Portfolio",
+            "description": "Hey, I'm Invite a",
+            "cta_text": "Explore More",
+            "cta_link": "about"
+        }
+    },
+    "about": {
+        "section_data": {
+            "title": "About Me",
+            "description": ""
+        },
+        "section_body": {
+            "description": "Hello, I'm <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Rajamanickam</span>, Results-driven Web Developer with 3 years of experience in designing and developing websites and web applications with attractive designs, using the latest frameworks and technologies. Proficient in aligning development strategies with goals to enhance user experience and engagement. Adept at staying abreast of market trends to deliver innovative and efficient solutions.",
+            "quotes": "Throughout my career, I've honed my abilities to create scalable and interactive applications that cater to the unique needs of each industry. I bring a passion for clean code and an eye for detail to ensure that the solutions I deliver exceed expectations.",
+            "profile_image": "about-thumb.jpg",
+            "profile_alt": "About Rajamanickam | Frontend Developer"
+        }
+    },
+    "skills": {
+        "section_data": {
+            "title": "Skills",
+            "description": ""
+        },
+        "section_body": [
+            {
+                "skillTitle": "React",
+                "skillIcon": "react.png"
+            },
+            {
+                "skillTitle": "Javascript",
+                "skillIcon": "javascript.png"
+            },
+            {
+                "skillTitle": "jQuery",
+                "skillIcon": "jquery.png"
+            },
+            {
+                "skillTitle": "Mysql",
+                "skillIcon": "mysql.png"
+            },
+            {
+                "skillTitle": "Tailwind",
+                "skillIcon": "tailwind.png"
+            },
+            {
+                "skillTitle": "Bootstrap",
+                "skillIcon": "bootstrap.png"
+            },
+            {
+                "skillTitle": "HTML5",
+                "skillIcon": "html.png"
+            },
+            {
+                "skillTitle": "CSS3",
+                "skillIcon": "css.png"
+            }
+        ]
+    },
+    "experience": {
+        "section_data": {
+            "title": "Work Experience",
+            "description": ""
+        },
+        "section_body": [
+            {
+                "companyName": "Xerago",
+                "position": "Sr. Associate Developer",
+                "duration": "Mar 2022 - Present",
+                "location": "Chennai",
+                "logo": "xgo-logo.png"
+            },
+            {
+                "companyName": "Wisewebtek",
+                "position": "Web Developer",
+                "duration": "Jun 2021 - Jan 2022",
+                "location": "Chennai",
+                "logo": "wwt-logo.png"
+            },
+            {
+                "companyName": "Ethoughtz Technology",
+                "position": "Junior Developer",
+                "duration": "Jul 2020 - Jun 2021",
+                "location": "Tirunelveli",
+                "logo": "et-logo.png"
+            }
+        ]
+    },
+    "project": {
+        "section_data": {
+            "title": "Projects",
+            "description": "Explore my personal project, a dynamic and interactive <a href=\"https://github.com/erajamanickam\" rel=\"noreferrer\" target=\"_blank\" class='text-[#61DAFB] hover:text-white mr-2'>Github</a>that showcases my skills in React, Javascript, and responsive UI design. Witness firsthand how I merge creativity with technology to craft a seamless and engaging user experience."
+        },
+        "section_body": [
+            {
+                "id": 1,
+                "icon": "doctorui-icon.png",
+                "title": "Doctor Appointment",
+                "description": "A doctor appointment app can help doctors to manage their patients...",
+                "link": "https://github.com/erajamanickam/booking-appointment",
+                "isActive": false
+            },
+            {
+                "id": 2,
+                "icon": "blogui-icon.png",
+                "title": "Blog Application Node",
+                "description": "Web application that allows users to create, manage, and publish their own...",
+                "link": "https://github.com/erajamanickam/blog-application-nodejs",
+                "isActive": false
+            },
+            {
+                "id": 3,
+                "icon": "dashboardui-icon.png",
+                "title": "React Dashboard",
+                "description": "Visual Task Board layout, robust drag-and-drop functionality...",
+                "link": "https://github.com/erajamanickam/Task-Management-Dashboard",
+                "isActive": true
+            },
+            {
+                "id": 4,
+                "icon": "login-icon.png",
+                "title": "Glossy Login UI",
+                "description": "A login screen is a user interface that is displayed when a user...",
+                "link": "https://codepen.io/erajamanickam/pen/NWeRZzx",
+                "isActive": false
+            },
+            {
+                "id": 5,
+                "icon": "accordion.png",
+                "title": "React Accordion",
+                "description": "Easily organize and display content in collapsible sections...",
+                "link": "https://github.com/erajamanickam/React-Accordion",
+                "isActive": true
+            },
+            {
+                "id": 6,
+                "icon": "tabsui.png",
+                "title": "React Tabs",
+                "description": "Implementation of tabbed navigation systems within React applications...",
+                "link": "https://github.com/erajamanickam/React-Tabs",
+                "isActive": true
+            },
+            {
+                "id": 7,
+                "icon": "login-icon.png",
+                "title": "React Form Validation",
+                "description": "Data integrity and user input accuracy with customizable validation rules...",
+                "link": "https://github.com/erajamanickam/React-Form-Validation",
+                "isActive": true
+            }
+        ]
+    },
+    "video": {
+        "section_data": {
+            "title": "The Videos",
+            "description": "Dive into my <a href=\"https://www.youtube.com/@rajamanickamweb\" target=\"_blank\" rel=\"noreferrer\" class='text-[#61DAFB] hover:text-white mr-2'>YouTube channel</a>for exclusive web development tutorials. I share insights, tips, and hands-on guidance to help you master the art of modern web development."
+        },
+        "section_body": {
+            "channel_url": "https://www.youtube.com/@rajamanickamweb",
+            "video_id": "UPyNp-SVV4M",
+            "thumbnail": "video-thumbnail.png",
+            "thumbnail_alt": "Video Thumbnail | Rajamanickam Youtube Channel"
+        }
+    },
+    "cta": {
+        "section_body": {
+            "title": "Do you want to hire me?",
+            "description": "Ready to elevate your team with my skills in frontend development? <br />Let's discuss how I can contribute to your success.",
+            "cta_txt": "Reach Us",
+            "cta_img": "cta-banner.png",
+            "cta_alt": "Hire a Web Developer"
+        }
+    },
+    "contact": {
+        "section_data": {
+            "title": "Contact Us",
+            "description": "Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, I'm here for you. Let's connect and make it happen!",
+            "email": "erajamanickam72@gmail.com",
+            "mobile": "+917449193747",
+            "social": {
+                "github": "https://github.com/erajamanickam/",
+                "linkedin": "https://www.linkedin.com/in/rajamanickamweb/",
+                "youtube": "https://www.youtube.com/@rajamanickamweb"
+            }
+        },
+        "section_body": {}
+    },
+    "footer": {
+        "section_body": {
+            "copyright": "All rights reserved.",
+            "developed": "Design & Dev by Raja"
+        }
+    }
+}
