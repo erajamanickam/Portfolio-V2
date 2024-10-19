@@ -1,5 +1,5 @@
 import React from 'react'
-import loderImg from '../assets/images/vite.svg'
+import loderImg from '/assets/images/vite.svg'
 
 const Loader = () => {
     return (
