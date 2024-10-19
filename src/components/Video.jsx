@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
-import videoThumb from '../assets/images/video-thumbnail.png'
 import ImageLoader from './ImageLoader';
 
 
