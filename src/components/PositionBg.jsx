@@ -1,5 +1,5 @@
 import React from 'react'
-import gradientBg from '../assets/images/gradient-bg.svg'
+import gradientBg from '/assets/images/gradient-bg.svg'
 
 const PositionBg = () => {
   return (

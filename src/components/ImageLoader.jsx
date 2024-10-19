@@ -2,8 +2,8 @@ import React from 'react';
 
 const getImage = (imageName) => {
     try {
-        console.log(new URL(`../assets/images/${imageName}`, import.meta.url).href)
-        return new URL(`../assets/images/${imageName}`, import.meta.url).href;
+        console.log(new URL(`/assets/images/${imageName}`, import.meta.url).href)
+        return new URL(`/assets/images/${imageName}`, import.meta.url).href;
     } catch (error) {
         console.error("Image not found:", imageName);
         return "";
