@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+
+/* @font-face {
     font-family: "Readex Pro Regular";
     src: url("assets/fonts/ReadexPro-Light.ttf");
 }
@@ -14,7 +17,7 @@
 
 body {
     font-family: "Readex Pro Regular";
-}
+} */
 
 .grecaptcha-badge {
     visibility: hidden;

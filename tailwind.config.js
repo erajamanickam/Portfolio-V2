@@ -11,6 +11,9 @@ module.exports = {
         lg: '976px',
         xl: '1440px',
       },
+      fontFamily: {
+        'readex': ['"Readex Pro"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
