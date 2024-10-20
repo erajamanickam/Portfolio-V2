@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-scroll';
-import ImageLoader from './ImageLoader';
 
 const Cta = ({ data }) => {
     const [ctaItems, setCtaItems] = useState([]);
@@ -23,11 +22,7 @@ const Cta = ({ data }) => {
                             </button>
                         </Link>
                     </div>
-                    <ImageLoader
-                        imageName={ctaItems?.section_body?.cta_img}
-                        altText={ctaItems?.section_body?.cta_alt}
-                        className='static md:absolute right-[16px] top-[-90px] w-[360px]'
-                    />
+                    <img src={ctaItems?.section_body?.cta_img} alt={ctaItems?.section_body?.cta_alt} className='static md:absolute right-[16px] top-[-90px] w-[360px]' />
                 </div>
             </div>
         </section>

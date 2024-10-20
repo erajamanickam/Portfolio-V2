@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ImageLoader from './ImageLoader';
 
 const Skills = ({ data }) => {
     const [skillItems, setSkillItems] = useState([]);
@@ -20,11 +19,7 @@ const Skills = ({ data }) => {
                     {skillItems?.section_body?.map((skill, index) => (
                         <div className='sm:basis-1/5 basis-2/5 sm:w-1/4 w-1/2 rounded-xl mb-7 mt-0 mx-4 bg-[linear-gradient(180deg,_#01d2f870_0%,_#1f1e1c99_67%)] hover:bg-[linear-gradient(180deg,_#01d2f870_100%,_#1f1e1c99_10%)] cursor-pointer transition-all duration-200 ease-in-out hover:-rotate-[5deg]' key={index}>
                             <div className='text-center rounded-xl bg-stone-800 p-5 mb-0 mt-0.5 mx-0.5'>
-                                <ImageLoader
-                                    imageName={skill.skillIcon}
-                                    altText={skill.skillTitle}
-                                    className='mx-auto mb-2'
-                                />
+                                <img src={skill.skillIcon} className="mx-auto mb-2" alt={skill.skillTitle} />
                                 <p className='mb-0 text-yellow-500'>{skill.skillTitle}</p>
                             </div>
                         </div>

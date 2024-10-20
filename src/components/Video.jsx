@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
-import ImageLoader from './ImageLoader';
 
 
 const Video = ({ data }) => {
@@ -51,9 +50,9 @@ const Video = ({ data }) => {
 
                 {!isPlaying ? (
                     <div className="relative border-[20px] rounded-[50px] border-slate-600">
-                        <ImageLoader
-                            imageName={videoItems?.section_body?.thumbnail}
-                            altText={videoItems?.section_body?.thumbnail_alt}
+                        <img
+                            src={videoItems?.section_body?.thumbnail}
+                            alt={videoItems?.section_body?.thumbnail_alt}
                             className="w-full h-auto cursor-pointer rounded-3xl"
                             onClick={handleClick}
                         />

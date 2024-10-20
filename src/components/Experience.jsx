@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ImageLoader from './ImageLoader';
 import { HiOutlineClock } from "react-icons/hi2";
 import { TiLocationOutline } from "react-icons/ti";
 
@@ -22,11 +21,7 @@ const Experience = ({ data }) => {
                         <div key={index} className="hover:border-indigo-400 border-2 rounded-2xl border-slate-700 flex-shrink-0 w-full md:w-11/12 mx-auto mb-4">
                             <div className="bg-sky-950 p-4 rounded-2xl shadow-md mx-auto w-full flex flex-wrap">
                                 <div className='sm:w-1/4 md:w-1/4 lg:w-1/4 w-full flex justify-center md:mb-0 mb-3'>
-                                    <ImageLoader
-                                        imageName={experience.logo}
-                                        altText={`${experience.companyName} Logo`}
-                                        className='rounded-full'
-                                    />
+                                <img src={experience.logo} className='rounded-full' alt={`${experience.companyName} Logo`} />
                                 </div>
                                 <h3 className="text-xl md:text-xl text-white md:text-left text-center font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full justify-center self-center">{experience.position}<span className='block text-slate-400 text-base'>{experience.companyName}</span></h3>
                                 <p className="text-white font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full text-lg md:text-lg flex justify-center self-center items-center "><HiOutlineClock size="23" className='text-gray-400 mr-2' /> {experience.duration}</p>

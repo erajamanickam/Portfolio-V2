@@ -10,7 +10,7 @@ const Hero = ({ data }) => {
     }, [data]);
 
     return (
-        <section className="bg-[url('/images/hero-bg.png')] bg-no-repeat	bg-cover text-white flex flex-col justify-center items-center z-20 relative" id='home'>
+        <section className="bg-[url('/assets/images/hero-bg.png')] bg-no-repeat	bg-cover text-white flex flex-col justify-center items-center z-20 relative" id='home'>
             <div className="mx-auto py-[8rem] px-4 sm:px-6 lg:max-w-7xl lg:px-8 text-center">
                 <p className="text-lg mb-4">
                     {heroItems?.section_body?.description}

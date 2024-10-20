@@ -49,35 +49,35 @@
         "section_body": [
             {
                 "skillTitle": "React",
-                "skillIcon": "react.png"
+                "skillIcon": "assets/images/react.png"
             },
             {
                 "skillTitle": "Javascript",
-                "skillIcon": "javascript.png"
+                "skillIcon": "assets/images/javascript.png"
             },
             {
                 "skillTitle": "jQuery",
-                "skillIcon": "jquery.png"
+                "skillIcon": "assets/images/jquery.png"
             },
             {
                 "skillTitle": "Mysql",
-                "skillIcon": "mysql.png"
+                "skillIcon": "assets/images/mysql.png"
             },
             {
                 "skillTitle": "Tailwind",
-                "skillIcon": "tailwind.png"
+                "skillIcon": "assets/images/tailwind.png"
             },
             {
                 "skillTitle": "Bootstrap",
-                "skillIcon": "bootstrap.png"
+                "skillIcon": "assets/images/bootstrap.png"
             },
             {
                 "skillTitle": "HTML5",
-                "skillIcon": "html.png"
+                "skillIcon": "assets/images/html.png"
             },
             {
                 "skillTitle": "CSS3",
-                "skillIcon": "css.png"
+                "skillIcon": "assets/images/css.png"
             }
         ]
     },
@@ -92,21 +92,21 @@
                 "position": "Sr. Associate Developer",
                 "duration": "Mar 2022 - Present",
                 "location": "Chennai",
-                "logo": "xgo-logo.png"
+                "logo": "assets/images/xgo-logo.png"
             },
             {
                 "companyName": "Wisewebtek",
                 "position": "Web Developer",
                 "duration": "Jun 2021 - Jan 2022",
                 "location": "Chennai",
-                "logo": "wwt-logo.png"
+                "logo": "assets/images/wwt-logo.png"
             },
             {
                 "companyName": "Ethoughtz Technology",
                 "position": "Junior Developer",
                 "duration": "Jul 2020 - Jun 2021",
                 "location": "Tirunelveli",
-                "logo": "et-logo.png"
+                "logo": "assets/images/et-logo.png"
             }
         ]
     },
@@ -118,7 +118,7 @@
         "section_body": [
             {
                 "id": 1,
-                "icon": "doctorui-icon.png",
+                "icon": "assets/images/doctorui-icon.png",
                 "title": "Doctor Appointment",
                 "description": "A doctor appointment app can help doctors to manage their patients...",
                 "link": "https://github.com/erajamanickam/booking-appointment",
@@ -126,7 +126,7 @@
             },
             {
                 "id": 2,
-                "icon": "blogui-icon.png",
+                "icon": "assets/images/blogui-icon.png",
                 "title": "Blog Application Node",
                 "description": "Web application that allows users to create, manage, and publish their own...",
                 "link": "https://github.com/erajamanickam/blog-application-nodejs",
@@ -134,7 +134,7 @@
             },
             {
                 "id": 3,
-                "icon": "dashboardui-icon.png",
+                "icon": "assets/images/dashboardui-icon.png",
                 "title": "React Dashboard",
                 "description": "Visual Task Board layout, robust drag-and-drop functionality...",
                 "link": "https://github.com/erajamanickam/Task-Management-Dashboard",
@@ -142,7 +142,7 @@
             },
             {
                 "id": 4,
-                "icon": "login-icon.png",
+                "icon": "assets/images/login-icon.png",
                 "title": "Glossy Login UI",
                 "description": "A login screen is a user interface that is displayed when a user...",
                 "link": "https://codepen.io/erajamanickam/pen/NWeRZzx",
@@ -150,7 +150,7 @@
             },
             {
                 "id": 5,
-                "icon": "accordion.png",
+                "icon": "assets/images/accordion.png",
                 "title": "React Accordion",
                 "description": "Easily organize and display content in collapsible sections...",
                 "link": "https://github.com/erajamanickam/React-Accordion",
@@ -158,7 +158,7 @@
             },
             {
                 "id": 6,
-                "icon": "tabsui.png",
+                "icon": "assets/images/tabsui.png",
                 "title": "React Tabs",
                 "description": "Implementation of tabbed navigation systems within React applications...",
                 "link": "https://github.com/erajamanickam/React-Tabs",
@@ -166,7 +166,7 @@
             },
             {
                 "id": 7,
-                "icon": "login-icon.png",
+                "icon": "assets/images/login-icon.png",
                 "title": "React Form Validation",
                 "description": "Data integrity and user input accuracy with customizable validation rules...",
                 "link": "https://github.com/erajamanickam/React-Form-Validation",
@@ -182,7 +182,7 @@
         "section_body": {
             "channel_url": "https://www.youtube.com/@rajamanickamweb",
             "video_id": "UPyNp-SVV4M",
-            "thumbnail": "video-thumbnail.png",
+            "thumbnail": "assets/images/video-thumbnail.png",
             "thumbnail_alt": "Video Thumbnail | Rajamanickam Youtube Channel"
         }
     },
@@ -191,7 +191,7 @@
             "title": "Do you want to hire me?",
             "description": "Ready to elevate your team with my skills in frontend development? <br />Let's discuss how I can contribute to your success.",
             "cta_txt": "Reach Us",
-            "cta_img": "cta-banner.png",
+            "cta_img": "assets/images/cta-banner.png",
             "cta_alt": "Hire a Web Developer"
         }
     },

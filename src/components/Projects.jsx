@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
-import ImageLoader from './ImageLoader';
-
 const Projects = ({ data }) => {
 
     const [projectItems, setProjectItems] = useState([]);
@@ -35,11 +33,7 @@ const Projects = ({ data }) => {
                         <div key={project.id} className="w-full md:w-1/2 px-4 mb-8 mx-auto">
                             <div className="bg-[#ffffff0d] p-6 border-solid border border-slate-600 rounded-lg shadow-md flex items-center flex-col md:flex-row">
                                 <div className="md:mr-6 mr-0 w-2/5 md:w-2/5">
-                                    <ImageLoader
-                                        imageName={project.icon}
-                                        altText={`Icon for ${project.title}`}
-                                        className='w-full h-full'
-                                    />
+                                    <img src={project.icon} alt={`Icon for ${project.title}`} className='w-full h-full' />
                                 </div>
                                 <div className='w-3/2 md:w-3/2 md:text-left text-center'>
                                     <h3 className="text-xl text-white font-semibold mb-2">{project.title}</h3>
