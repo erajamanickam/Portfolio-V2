@@ -8,7 +8,7 @@ function App() {
     <>
       <div className='bg-slate-800'>
         <Routes>
-          <Route path="/" element={<NotFoundPage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/prod" element={<Homepage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

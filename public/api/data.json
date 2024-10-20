@@ -37,7 +37,7 @@
         "section_body": {
             "description": "Hello, I'm <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Rajamanickam</span>, Results-driven Web Developer with 3 years of experience in designing and developing websites and web applications with attractive designs, using the latest frameworks and technologies. Proficient in aligning development strategies with goals to enhance user experience and engagement. Adept at staying abreast of market trends to deliver innovative and efficient solutions.",
             "quotes": "Throughout my career, I've honed my abilities to create scalable and interactive applications that cater to the unique needs of each industry. I bring a passion for clean code and an eye for detail to ensure that the solutions I deliver exceed expectations.",
-            "profile_image": "about-thumb.jpg",
+            "profile_image": "assets/images/about-thumb.jpg",
             "profile_alt": "About Rajamanickam | Frontend Developer"
         }
     },

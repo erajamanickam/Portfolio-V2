@@ -19,11 +19,12 @@ const About = ({ data }) => {
                     <p className='text-gray-300 font-medium text-center md:text-justify text-lg md:text-xl mb-4'>{aboutItems?.section_body?.quotes}</p>
                 </div>
                 <div className="w-w-1/3 md:w-full px-4 mb-2 md:mb-8">
-                    <ImageLoader
+                    <img src={aboutItems?.section_body?.profile_image} className="w-full h-auto shadow-md [clip-path:polygon(22.2%_0%,100%_0%,100%_100%,0%_100%,_0_18.3%)]" alt='' />
+                    {/* <ImageLoader
                         imageName={aboutItems?.section_body?.profile_image}
                         altText={aboutItems?.section_body?.profile_alt}
                         className="w-full h-auto shadow-md [clip-path:polygon(22.2%_0%,100%_0%,100%_100%,0%_100%,_0_18.3%)]"
-                    />
+                    /> */}
                 </div>
             </div>
         </section>

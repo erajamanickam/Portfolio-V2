@@ -17,7 +17,7 @@ import Loader from './Loader';
 const Homepage = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    
+
     useEffect(() => {
         const loadData = async () => {
             setLoading(true);
@@ -34,16 +34,16 @@ const Homepage = () => {
 
     return (
         <>
-            <PositionBg />
+            {/* <PositionBg /> */}
             <Navbar data={data} />
-            <Hero data={data} />
+            {/* <Hero data={data} /> */}
             <About data={data} />
-            <Skills data={data} />
+            {/* <Skills data={data} />
             <Experience data={data} />
             <Projects data={data} />
             <Video data={data} />
             <Cta data={data} />
-            <Contact data={data} />
+            <Contact data={data} /> */}
             <Footer data={data} />
         </>
     )
