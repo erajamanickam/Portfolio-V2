@@ -254,7 +254,7 @@ const Contact = ({ data }) => {
                             rows="4"
                             className="w-full border-2 border-solid border-[#ffffff26] focus:border-[#cc00ff] p-2 rounded-md bg-transparent outline-0 text-white"
                         ></textarea>
-                    </div>
+                    </div> 
 
                     <ReCAPTCHA
                         sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
