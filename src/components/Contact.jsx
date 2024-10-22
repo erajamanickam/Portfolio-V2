@@ -261,6 +261,7 @@ const Contact = ({ data }) => {
                         ref={captchaRef}
                         onChange={handleRecaptchaChange}
                     />
+
                     {submissionError && <div className="text-red-600 text-xs mb-2">{submissionError}</div>}
 
                     <button type='submit' className="mt-2 py-0 px-7 h-[2.6em] transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-gradient-to-r text-white from-[#89E5FF] to-[#5468FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
