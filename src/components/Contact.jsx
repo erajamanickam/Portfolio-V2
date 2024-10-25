@@ -55,7 +55,6 @@ const Contact = ({ data }) => {
         let isValid = true;
         const newErrors = { ...errors };
 
-        // Validate Name
         if (!formData.name.trim() || /[0-9!@#$%^&*()_+={};':"\\|,.<>?/]+/.test(formData.name)) {
             newErrors.name = 'Please enter a name';
             isValid = false;
@@ -63,7 +62,6 @@ const Contact = ({ data }) => {
             newErrors.name = '';
         }
 
-        // Validate Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(formData.email.trim())) {
             newErrors.email = 'Please enter a valid email address';
@@ -72,7 +70,6 @@ const Contact = ({ data }) => {
             newErrors.email = '';
         }
 
-        // Validate Mobile
         const mobileRegex = /^[0-9]+$/;
         if (!mobileRegex.test(formData.mobile.trim()) || formData.mobile.length !== 10) {
             newErrors.mobile = 'Please enter a valid mobile no';
@@ -81,7 +78,6 @@ const Contact = ({ data }) => {
             newErrors.mobile = '';
         }
 
-        // Validate Purpose
         if (!formData.purpose) {
             newErrors.purpose = 'Please choose a purpose.';
             isValid = false;
@@ -94,11 +90,10 @@ const Contact = ({ data }) => {
     };
 
     const getInputBorderColor = (inputName) => {
-        // Use Tailwind CSS classes to set border color based on validation status
         if (errors[inputName]) {
-            return 'border-red-600'; // Set the border color to red if there is an error
+            return 'border-red-600';
         } else {
-            return 'border-[#ffffff26] focus:border-[#cc00ff]'; // Set the default border color
+            return 'border-[#ffffff26] focus:border-[#cc00ff]';
         }
     };
 
@@ -145,11 +140,11 @@ const Contact = ({ data }) => {
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">{contactItems?.section_data?.title}</h2>
                 <p className="text-lg text-gray-300 mb-4 text-center">{contactItems?.section_data?.description}</p>
                 <ul className='mb-4'>
-                    <li>
-                        <a href={`mailto:${contactItems?.section_data?.email}`} className='text-[#61DAFB] hover:text-white mr-2 flex items-center justify-center mb-1'><BsEnvelopeAt size="20" color="#61DAFB" className='mr-2' /> {contactItems?.section_data?.email} </a>
+                    <li className="flex items-center justify-center">
+                        <a href={`mailto:${contactItems?.section_data?.email}`} className='text-[#61DAFB] hover:text-white mr-2 flex items-center mb-1'><BsEnvelopeAt size="20" color="#61DAFB" className='mr-2' /> {contactItems?.section_data?.email} </a>
                     </li>
-                    <li>
-                        <a href={`tel:${contactItems?.section_data?.mobile}`} className='text-[#61DAFB] hover:text-white flex items-center justify-center'><FaMobileAlt size="20" color="#61DAFB" className='mr-0.5' /> {contactItems?.section_data?.mobile}</a>
+                    <li className="flex items-center justify-center">
+                        <a href={`tel:${contactItems?.section_data?.mobile}`} className='text-[#61DAFB] hover:text-white flex items-center'><FaMobileAlt size="20" color="#61DAFB" className='mr-0.5' /> {contactItems?.section_data?.mobile}</a>
                     </li>
                 </ul>
 
