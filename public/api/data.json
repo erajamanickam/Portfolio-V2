@@ -190,14 +190,14 @@
         "section_body": {
             "title": "Do you want to hire me?",
             "description": "Ready to elevate your team with my skills in frontend development? <br />Let's discuss how I can contribute to your success.",
-            "cta_txt": "Reach Us",
+            "cta_txt": "Reach Me",
             "cta_img": "assets/images/cta-banner.png",
             "cta_alt": "Hire a Web Developer"
         }
     },
     "contact": {
         "section_data": {
-            "title": "Contact Us",
+            "title": "Contact Me",
             "description": "Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, I'm here for you. Let's connect and make it happen!",
             "email": "erajamanickam72@gmail.com",
             "mobile": "+917449193747",
