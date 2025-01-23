@@ -178,22 +178,6 @@ const Contact = ({ data }) => {
 
                         <div className="mb-4">
                             <input
-                                type="text"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Email"
-                                className={`w-full border-2 border-solid ${getInputBorderColor('email')} p-2 rounded-md bg-transparent outline-0 text-white`}
-                                autoComplete="off"
-                            />
-                            {errors.email && <p className='text-red-600 text-xs'>{errors.email}</p>}
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-4">
-                        <div className="mb-4">
-                            <input
                                 type="tel"
                                 id="mobile"
                                 name="mobile"
@@ -205,8 +189,24 @@ const Contact = ({ data }) => {
                             />
                             {errors.mobile && <p className='text-red-600 text-xs'>{errors.mobile}</p>}
                         </div>
+                    </div>
 
-                        <div className="mb-4 flex items-center">
+                    <div className="gap-0">
+                        
+                        <div className="mb-4">
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Email"
+                                className={`w-full border-2 border-solid ${getInputBorderColor('email')} p-2 rounded-md bg-transparent outline-0 text-white`}
+                                autoComplete="off"
+                            />
+                            {errors.email && <p className='text-red-600 text-xs'>{errors.email}</p>}
+                        </div>
+                        {/* <div className="mb-4 flex items-center">
                             <div className="flex items-center">
                                 <input
                                     type="radio"
@@ -235,7 +235,7 @@ const Contact = ({ data }) => {
                                     Hire
                                 </label>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
 
