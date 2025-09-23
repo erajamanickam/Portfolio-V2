@@ -17,7 +17,7 @@ const Cta = ({ data }) => {
                         <h4 className='text-white text-3xl	font-semibold mb-2'>{ctaItems?.section_body?.title}</h4>
                         <p className='text-white' dangerouslySetInnerHTML={{ __html: ctaItems?.section_body?.description }}></p>
                         <Link to="contact" smooth={true} duration={500}>
-                            <button className="py-0 px-7 h-[2.6em] mt-4 text-white transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-gradient-to-r from-[#89E5FF] to-[#5468FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
+                            <button className="py-0 px-7 h-[2.6em] mt-4 text-gray-800 transition-all duration-150 ease-in-out shadow-lg focus:outline-none font-size-[18px] inline-block outline-none border-none cursor-pointer will-change-[box-shadow,transform] bg-[#89E5FF] shadow-indigo-500/50 rounded-full hover:transform hover:-translate-y-1 hover:shadow-lg">
                                 {ctaItems?.section_body?.cta_txt}
                             </button>
                         </Link>

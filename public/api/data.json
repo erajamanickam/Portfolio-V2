@@ -23,8 +23,8 @@
     ],
     "hero": {
         "section_body": {
-            "title": "My World of Code and <br /> <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Creativity!</span>",
-            "description": "Welcome to",
+            "title": "I turn ideas into <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>scalable web apps</span> & <br /> <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>AI-powered products</span> that users love ❤️",
+            "description": "Hey,",
             "cta_text": "Explore More",
             "cta_link": "about"
         }
@@ -35,8 +35,9 @@
             "description": ""
         },
         "section_body": {
-            "description": "Hello, I'm <span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Rajamanickam</span>, Results-driven Web Developer with 4 years of experience in designing and developing websites and web applications with attractive designs, using the latest frameworks and technologies. Proficient in aligning development strategies with goals to enhance user experience and engagement. Adept at staying abreast of market trends to deliver innovative and efficient solutions.",
-            "quotes": "Throughout my career, I've honed my abilities to create scalable and interactive applications that cater to the unique needs of each industry. I bring a passion for clean code and an eye for detail to ensure that the solutions I deliver exceed expectations.",
+            "description": "<span class='text-[#61DAFB] bg-gradient-to-l from-red-400 to-violet-400 text-transparent bg-clip-text'>Rajamanickam</span>, a Software Developer (5 YOE) who loves turning complex ideas into sleek, scalable products. From building AI-powered platforms to crafting pixel-perfect UIs, I focus on blending technology with creativity to deliver experiences that actually matter.",
+            "quotes": "I believe in working smarter, not harder - leveraging modern libraries, frameworks, and automation tools to cut down repetitive coding by up to 60%, while keeping solutions clean, reliable, and future-ready.",
+            "quotes_alt": "Clean code, smart workflows, and user-first design aren't just skills for me - they're habits I practice every day.",
             "profile_image": "assets/images/about-thumb.jpg",
             "profile_alt": "About Rajamanickam | Frontend Developer"
         }
@@ -56,11 +57,23 @@
                 "skillIcon": "assets/images/javascript.png"
             },
             {
-                "skillTitle": "jQuery",
-                "skillIcon": "assets/images/jquery.png"
+                "skillTitle": "Next.js",
+                "skillIcon": "assets/images/nextjs.png"
             },
             {
-                "skillTitle": "Mysql",
+                "skillTitle": "Typescript",
+                "skillIcon": "assets/images/typescript.png"
+            },
+            {
+                "skillTitle": "Node.js",
+                "skillIcon": "assets/images/nodejs.png"
+            },
+            {
+                "skillTitle": "PostgreSQL",
+                "skillIcon": "assets/images/postgresql.png"
+            },
+            {
+                "skillTitle": "MySQL",
                 "skillIcon": "assets/images/mysql.png"
             },
             {
@@ -70,10 +83,6 @@
             {
                 "skillTitle": "Bootstrap",
                 "skillIcon": "assets/images/bootstrap.png"
-            },
-            {
-                "skillTitle": "HTML5",
-                "skillIcon": "assets/images/html.png"
             },
             {
                 "skillTitle": "CSS3",
@@ -89,7 +98,7 @@
         "section_body": [
             {
                 "companyName": "Xerago",
-                "position": "Sr. Associate Developer",
+                "position": "Executive Developer",
                 "duration": "Mar 2022 - Present",
                 "location": "Chennai",
                 "logo": "assets/images/xgo-logo.png"
@@ -198,7 +207,7 @@
     "contact": {
         "section_data": {
             "title": "Contact Me",
-            "description": "Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, I'm here for you. Let's connect and make it happen!",
+            "description": "Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, <br /> I'm here for you. Let's connect and make it happen!",
             "email": "erajamanickam72@gmail.com",
             "mobile": "+917449193747",
             "social": {
