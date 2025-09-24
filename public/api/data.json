@@ -186,7 +186,7 @@
     "video": {
         "section_data": {
             "title": "The Videos",
-            "description": "Dive into my <a href=\"https://www.youtube.com/@rajamanickamweb\" target=\"_blank\" rel=\"noreferrer\" class='text-[#61DAFB] hover:text-white mr-2'>YouTube channel</a>for exclusive web development tutorials. I share insights, tips, and hands-on guidance to help you master the art of modern web development."
+            "description": "Dive into my <a href=\"https://www.youtube.com/@rajamanickamweb\" target=\"_blank\" rel=\"noreferrer\" class='text-[#61DAFB] hover:text-white mr-2'>YouTube channel</a>for exclusive web development tutorials.<br /> I share insights, tips, and hands-on guidance to help you master the art of modern web development."
         },
         "section_body": {
             "channel_url": "https://www.youtube.com/@rajamanickamweb",
@@ -207,7 +207,7 @@
     "contact": {
         "section_data": {
             "title": "Contact Me",
-            "description": "Ready to turn your ideas into reality? Whether you're looking to hire a dedicated professional or discuss your next project, <br /> I'm here for you. Let's connect and make it happen!",
+            "description": "Ready to turn your ideas into reality? <br />Whether you're looking to hire a dedicated professional or discuss your next project, <br /> I'm here for you. Let's connect and make it happen!",
             "email": "erajamanickam72@gmail.com",
             "mobile": "+917449193747",
             "social": {

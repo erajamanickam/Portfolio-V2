@@ -138,7 +138,8 @@ const Contact = ({ data }) => {
         <section className='py-12 z-20 relative' id='contact'>
             <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">{contactItems?.section_data?.title}</h2>
-                <p className="text-lg text-gray-300 mb-4 text-center">{contactItems?.section_data?.description}</p>
+                {/* <p className="text-lg text-gray-300 mb-4 text-center">{contactItems?.section_data?.description}</p> */}
+                <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: contactItems?.section_data?.description }}></p>
                 <ul className='mb-4'>
                     <li className="flex items-center justify-center">
                         <a href={`mailto:${contactItems?.section_data?.email}`} className='text-[#61DAFB] hover:text-white mr-2 flex items-center mb-1'><BsEnvelopeAt size="20" color="#61DAFB" className='mr-2' /> {contactItems?.section_data?.email} </a>

@@ -31,4 +31,5 @@ const Skills = ({ data }) => {
 }
 
 
+
 export default Skills
