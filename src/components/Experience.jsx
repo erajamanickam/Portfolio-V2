@@ -18,14 +18,14 @@ const Experience = ({ data }) => {
                 )}
                 <div className="flex flex-wrap">
                     {expItems?.section_body?.map((experience, index) => (
-                        <div key={index} className="hover:border-indigo-400 border-2 rounded-2xl border-slate-700 flex-shrink-0 w-full md:w-11/12 mx-auto mb-4">
-                            <div className="bg-sky-950 p-4 rounded-2xl shadow-md mx-auto w-full flex flex-wrap">
-                                <div className='sm:w-1/4 md:w-1/4 lg:w-1/4 w-full flex justify-center md:mb-0 mb-3'>
-                                <img src={experience.logo} className='rounded-full' alt={`${experience.companyName} Logo`} />
+                        <div key={index} className="hover:border-indigo-400 border-2 rounded-2xl border-slate-700 flex-shrink-0 w-full sm-plus:w-11/12 mx-auto mb-4">
+                            <div className="bg-sky-950 p-3 sm-plus:p-4 rounded-2xl shadow-md mx-auto w-full flex flex-col sm-plus:flex-row sm-plus:flex-wrap">
+                                <div className='w-full sm-plus:w-1/4 flex justify-center sm-plus:justify-start mb-3 sm-plus:mb-0'>
+                                <img src={experience.logo} className='rounded-full w-16 h-16 sm-plus:w-20 sm-plus:h-20 object-cover' alt={`${experience.companyName} Logo`} />
                                 </div>
-                                <h3 className="text-xl md:text-xl text-white md:text-left text-center font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full justify-center self-center">{experience.position}<span className='block text-slate-400 text-base'>{experience.companyName}</span></h3>
-                                <p className="text-white font-semibold mb-2 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full text-lg md:text-lg flex justify-center self-center items-center "><HiOutlineClock size="23" className='text-gray-400 mr-2' /> {experience.duration}</p>
-                                <p className="text-lg text-gray-400 sm:w-1/4 md:w-1/4 lg:w-1/4 w-full self-center flex justify-center items-center"><TiLocationOutline size="23" className='text-gray-400 mr-1' /> {experience.location}</p>
+                                <h3 className="text-lg sm-plus:text-xl text-white text-center sm-plus:text-left font-semibold mb-2 w-full sm-plus:w-1/4 flex flex-col justify-center">{experience.position}<span className='block text-slate-400 text-sm sm-plus:text-base'>{experience.companyName}</span></h3>
+                                <p className="text-white font-semibold mb-2 w-full sm-plus:w-1/4 text-base sm-plus:text-lg flex justify-center sm-plus:justify-start items-center"><HiOutlineClock size="20" className='text-gray-400 mr-2' /> {experience.duration}</p>
+                                <p className="text-base sm-plus:text-lg text-gray-400 w-full sm-plus:w-1/4 flex justify-center sm-plus:justify-start items-center"><TiLocationOutline size="20" className='text-gray-400 mr-1' /> {experience.location}</p>
                             </div>
                         </div>
                     ))}
