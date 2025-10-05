@@ -20,7 +20,7 @@ const Experience = ({ data }) => {
                     {expItems?.section_body?.map((experience, index) => (
                         <div key={index} className="hover:border-indigo-400 border-2 rounded-2xl border-slate-700 flex-shrink-0 w-full sm-plus:w-11/12 mx-auto mb-4">
                             <div className="bg-sky-950 p-3 sm-plus:p-4 rounded-2xl shadow-md mx-auto w-full flex flex-col sm-plus:flex-row sm-plus:flex-wrap">
-                                <div className='w-full sm-plus:w-1/4 flex justify-center sm-plus:justify-start mb-3 sm-plus:mb-0'>
+                                <div className='w-full sm-plus:w-1/4 flex justify-center sm-plus:justify-center mb-3 sm-plus:mb-0'>
                                 <img src={experience.logo} className='rounded-full w-16 h-16 sm-plus:w-20 sm-plus:h-20 object-cover' alt={`${experience.companyName} Logo`} />
                                 </div>
                                 <h3 className="text-lg sm-plus:text-xl text-white text-center sm-plus:text-left font-semibold mb-2 w-full sm-plus:w-1/4 flex flex-col justify-center">{experience.position}<span className='block text-slate-400 text-sm sm-plus:text-base'>{experience.companyName}</span></h3>

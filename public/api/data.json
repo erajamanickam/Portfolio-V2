@@ -65,16 +65,12 @@
                 "skillIcon": "assets/images/typescript.png"
             },
             {
-                "skillTitle": "Node.js",
-                "skillIcon": "assets/images/nodejs.png"
+                "skillTitle": "Redux",
+                "skillIcon": "assets/images/redux.png"
             },
             {
-                "skillTitle": "PostgreSQL",
-                "skillIcon": "assets/images/postgresql.png"
-            },
-            {
-                "skillTitle": "MySQL",
-                "skillIcon": "assets/images/mysql.png"
+                "skillTitle": "jQuery",
+                "skillIcon": "assets/images/jquery.png"
             },
             {
                 "skillTitle": "Tailwind",
@@ -87,6 +83,10 @@
             {
                 "skillTitle": "CSS3",
                 "skillIcon": "assets/images/css.png"
+            },
+            {
+                "skillTitle": "HTML5",
+                "skillIcon": "assets/images/html.png"
             }
         ]
     },
