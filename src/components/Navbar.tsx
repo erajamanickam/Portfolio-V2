@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import { MenuItem, PortfolioData } from '../types';
 
 
-const Navbar = ({ data }) => {
+interface NavbarProps {
+    data: PortfolioData | null;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ data }) => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [menuItems, setMenuItems] = useState([]);
+    const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
 
     useEffect(() => {
         if (data) {
@@ -37,7 +42,7 @@ const Navbar = ({ data }) => {
                     </div>
 
                     <div className="md:hidden">
-                        <button className="text-white" onClick={toggleMobileMenu}>
+                        <button className="text-white" onClick={toggleMobileMenu} aria-label="Toggle menu">
                             {isMobileMenuOpen ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +81,7 @@ const Navbar = ({ data }) => {
                 {isMobileMenuOpen && (
                     <div className="md:hidden mt-2">
                         {menuItems.map((item, index) => (
-                            <Link to={item.link} key={item.index} onClick={closeMobileMenu} smooth={true} duration={500} className='block text-white py-2 cursor-pointer'>
+                            <Link to={item.link} key={index} onClick={closeMobileMenu} smooth={true} duration={500} className='block text-white py-2 cursor-pointer'>
                                 {item.name}
                             </Link>
                         ))}

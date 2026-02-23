@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, ChangeEvent, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 import { BsEnvelopeAt } from "react-icons/bs";
@@ -6,10 +6,29 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { ContactData, PortfolioData } from '../types';
 
- 
-const Contact = ({ data }) => {
-    const [contactItems, setContactItems] = useState([]);
+interface ContactProps {
+    data: PortfolioData | null;
+}
+
+interface FormData {
+    name: string;
+    email: string;
+    mobile: string;
+    purpose: string;
+    message: string;
+}
+
+interface Errors {
+    name: string;
+    email: string;
+    mobile: string;
+    purpose: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ data }) => {
+    const [contactItems, setContactItems] = useState<ContactData | null>(null);
 
     useEffect(() => {
         if (data) {
@@ -17,13 +36,12 @@ const Contact = ({ data }) => {
         }
     }, [data]);
 
-    const form = useRef();
-    const captchaRef = useRef(null)
+    const form = useRef<HTMLFormElement>(null);
+    const captchaRef = useRef<ReCAPTCHA>(null)
 
-    const [isRecaptchaVerified, setRecaptchaVerified] = useState(false);
     const [submissionError, setSubmissionError] = useState('');
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
         mobile: '',
@@ -31,14 +49,14 @@ const Contact = ({ data }) => {
         message: '',
     });
 
-    const [errors, setErrors] = useState({
+    const [errors, setErrors] = useState<Errors>({
         name: '',
         email: '',
         mobile: '',
         purpose: '',
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -89,7 +107,7 @@ const Contact = ({ data }) => {
         return isValid;
     };
 
-    const getInputBorderColor = (inputName) => {
+    const getInputBorderColor = (inputName: keyof Errors) => {
         if (errors[inputName]) {
             return 'border-red-600';
         } else {
@@ -97,31 +115,25 @@ const Contact = ({ data }) => {
         }
     };
 
-    const handleRecaptchaChange = (value) => {
+    const handleRecaptchaChange = (value: string | null) => {
         if (value) {
             setSubmissionError('');
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         try {
             if (validateForm()) {
                 if (captchaRef.current && captchaRef.current.getValue()) {
-                    console.log(validateForm(), captchaRef.current, captchaRef.current.getValue());
-                    const token = captchaRef.current.getValue();
-                    captchaRef.current.reset();
-
-                    emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', e.target, 'user_e6CZf4K6kU9TCU80qBwFO')
+                    emailjs.sendForm('service_w4yhkhe', 'template_qwwdhwb', e.currentTarget, 'user_e6CZf4K6kU9TCU80qBwFO')
                         .then((result) => {
                             alert('Thank You, I am shortly contact with you');
                             window.location.reload();
                         }, (error) => {
                             alert('Oops!. Try again later');
                         });
-
-                    // console.log('Form submitted:', formData);
                 } else {
                     setSubmissionError('Please verify reCAPTCHA');
                 }
@@ -129,7 +141,6 @@ const Contact = ({ data }) => {
                 setSubmissionError('Please verify reCAPTCHA');
             }
         } catch (error) {
-            // console.error('Form submission error:', error.message);
             setSubmissionError('An error occurred during form submission. Please try again.');
         }
     };
@@ -138,8 +149,7 @@ const Contact = ({ data }) => {
         <section className='py-12 z-20 relative' id='contact'>
             <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">{contactItems?.section_data?.title}</h2>
-                {/* <p className="text-lg text-gray-300 mb-4 text-center">{contactItems?.section_data?.description}</p> */}
-                <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: contactItems?.section_data?.description }}></p>
+                <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: contactItems?.section_data?.description || '' }}></p>
                 <ul className='mb-4'>
                     <li className="flex items-center justify-center">
                         <a href={`mailto:${contactItems?.section_data?.email}`} className='text-[#61DAFB] hover:text-white mr-2 flex items-center mb-1'><BsEnvelopeAt size="20" color="#61DAFB" className='mr-2' /> {contactItems?.section_data?.email} </a>
@@ -193,7 +203,6 @@ const Contact = ({ data }) => {
                     </div>
 
                     <div className="gap-0">
-                        
                         <div className="mb-4">
                             <input
                                 type="text"
@@ -207,37 +216,6 @@ const Contact = ({ data }) => {
                             />
                             {errors.email && <p className='text-red-600 text-xs'>{errors.email}</p>}
                         </div>
-                        {/* <div className="mb-4 flex items-center">
-                            <div className="flex items-center">
-                                <input
-                                    type="radio"
-                                    id="discussionOption"
-                                    name="purpose"
-                                    value="discussion"
-                                    checked={formData.purpose === 'discussion'}
-                                    onChange={handleChange}
-                                />
-                                <label
-                                    htmlFor="discussionOption"
-                                    className="cursor-pointer ml-2 text-slate-300"
-                                >
-                                    Discussion
-                                </label>
-                                <input
-                                    type="radio"
-                                    id="hireOption"
-                                    name="purpose"
-                                    value="hire"
-                                    checked={formData.purpose === 'hire'}
-                                    onChange={handleChange}
-                                    className="ml-4"
-                                />
-                                <label htmlFor="hireOption" className="cursor-pointer ml-2 text-slate-300">
-                                    Hire
-                                </label>
-                            </div>
-                        </div> */}
-
                     </div>
 
                     <div className="mb-4">
@@ -247,13 +225,13 @@ const Contact = ({ data }) => {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Message"
-                            rows="4"
+                            rows={4}
                             className="w-full border-2 border-solid border-[#ffffff26] focus:border-[#cc00ff] p-2 rounded-md bg-transparent outline-0 text-white"
                         ></textarea>
-                    </div> 
+                    </div>
 
                     <ReCAPTCHA
-                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY as string}
                         ref={captchaRef}
                         onChange={handleRecaptchaChange}
                     />

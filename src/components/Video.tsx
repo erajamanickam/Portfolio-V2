@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
+import { PortfolioData, VideoData } from '../types';
 
 
-const Video = ({ data }) => {
+interface VideoProps {
+    data: PortfolioData | null;
+}
+
+const Video: React.FC<VideoProps> = ({ data }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isReady, setIsReady] = useState(false);
 
@@ -10,8 +15,8 @@ const Video = ({ data }) => {
         height: '720',
         width: '100%',
         playerVars: {
-            autoplay: 1,
-            rel: 0
+            autoplay: 1 as const,
+            rel: 0 as const
         },
     };
 
@@ -19,17 +24,18 @@ const Video = ({ data }) => {
         setIsPlaying(true);
     };
 
-    const handleReady = (event) => {
+    const handleReady = () => {
         setIsReady(true);
     };
 
-    const handleStateChange = (event) => {
-        if (event.data === YouTube.PlayerState.PLAYING) {
+    const handleStateChange = (event: any) => {
+        // @ts-ignore
+        if (event.data === YouTube.PlayerState?.PLAYING) {
             // Video is playing
         }
     };
 
-    const [videoItems, setVideoItems] = useState([]);
+    const [videoItems, setVideoItems] = useState<VideoData | null>(null);
 
     useEffect(() => {
         if (data) {
@@ -41,7 +47,7 @@ const Video = ({ data }) => {
         <section className='py-12 z-20 relative' id="video">
             <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
 
-                {videoItems.section_data && (
+                {videoItems?.section_data && (
                     <>
                         <h2 className="text-3xl font-bold text-white mb-4 text-center animate__animated animate__jackInTheBox">{videoItems?.section_data?.title}</h2>
                         <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: videoItems?.section_data?.description }}></p>

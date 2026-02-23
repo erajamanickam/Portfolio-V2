@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FaRegCopyright } from "react-icons/fa";
+import { FooterData, PortfolioData } from '../types';
 
-const Footer = ({ data }) => {
+interface FooterProps {
+    data: PortfolioData | null;
+}
+
+const Footer: React.FC<FooterProps> = ({ data }) => {
     const currentYear = new Date().getFullYear();
-    const [footerItems, setFooterItems] = useState([]);
+    const [footerItems, setFooterItems] = useState<FooterData | null>(null);
 
     useEffect(() => {
         if (data) {

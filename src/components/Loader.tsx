@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import loderImg from '/assets/images/vite.svg'
 
-const Loader = () => {
+const Loader: React.FC = () => {
     return (
         <div className="flex justify-center items-center h-screen">
             <img src={loderImg} alt="Loading..." className="w-16 h-16" />

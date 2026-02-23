@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { HiOutlineClock } from "react-icons/hi2";
 import { TiLocationOutline } from "react-icons/ti";
+import { ExperienceData, PortfolioData } from '../types';
 
-const Experience = ({ data }) => {
-    const [expItems, setExpItems] = useState([]);
+interface ExperienceProps {
+    data: PortfolioData | null;
+}
+
+const Experience: React.FC<ExperienceProps> = ({ data }) => {
+    const [expItems, setExpItems] = useState<ExperienceData | null>(null);
     useEffect(() => {
         if (data) {
             setExpItems(data.experience)
@@ -21,7 +26,7 @@ const Experience = ({ data }) => {
                         <div key={index} className="hover:border-indigo-400 border-2 rounded-2xl border-slate-700 flex-shrink-0 w-full sm-plus:w-11/12 mx-auto mb-4">
                             <div className="bg-sky-950 p-3 sm-plus:p-4 rounded-2xl shadow-md mx-auto w-full flex flex-col sm-plus:flex-row sm-plus:flex-wrap">
                                 <div className='w-full sm-plus:w-1/4 flex justify-center sm-plus:justify-center mb-3 sm-plus:mb-0'>
-                                <img src={experience.logo} className='rounded-full w-16 h-16 sm-plus:w-20 sm-plus:h-20 object-cover' alt={`${experience.companyName} Logo`} />
+                                    <img src={experience.logo} className='rounded-full w-16 h-16 sm-plus:w-20 sm-plus:h-20 object-cover' alt={`${experience.companyName} Logo`} />
                                 </div>
                                 <h3 className="text-lg sm-plus:text-xl text-white text-center sm-plus:text-left font-semibold mb-2 w-full sm-plus:w-1/4 flex flex-col justify-center">{experience.position}<span className='block text-slate-400 text-sm sm-plus:text-base'>{experience.companyName}</span></h3>
                                 <p className="text-white font-semibold mb-2 w-full sm-plus:w-1/4 text-base sm-plus:text-lg flex justify-center sm-plus:justify-start items-center"><HiOutlineClock size="20" className='text-gray-400 mr-2' /> {experience.duration}</p>

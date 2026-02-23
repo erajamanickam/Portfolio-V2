@@ -1,8 +1,7 @@
 import React from 'react';
 
-const getImage = (imageName) => {
+const getImage = (imageName: string): string => {
     try {
-        console.log(new URL(`/assets/images/${imageName}`, import.meta.url).href)
         return new URL(`/assets/images/${imageName}`, import.meta.url).href;
     } catch (error) {
         console.error("Image not found:", imageName);
@@ -10,7 +9,13 @@ const getImage = (imageName) => {
     }
 };
 
-const ImageLoader = ({ imageName, altText, className }) => {
+interface ImageLoaderProps {
+    imageName: string;
+    altText: string;
+    className?: string;
+}
+
+const ImageLoader: React.FC<ImageLoaderProps> = ({ imageName, altText, className }) => {
     const imageSrc = getImage(imageName);
 
     return (

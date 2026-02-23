@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './Navbar';
 import Hero from './Hero';
 import PositionBg from './PositionBg';
@@ -12,10 +12,11 @@ import Contact from './Contact';
 import Footer from './Footer';
 import { fetchData } from '../services/apiService';
 import Loader from './Loader';
+import { PortfolioData } from '../types';
 
 
 const Homepage = () => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<PortfolioData | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -50,5 +51,3 @@ const Homepage = () => {
 }
 
 export default Homepage
-
-

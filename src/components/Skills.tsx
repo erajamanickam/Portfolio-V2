@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { PortfolioData, SkillsData } from '../types';
 
-const Skills = ({ data }) => {
-    const [skillItems, setSkillItems] = useState([]);
+interface SkillsProps {
+    data: PortfolioData | null;
+}
+
+const Skills: React.FC<SkillsProps> = ({ data }) => {
+    const [skillItems, setSkillItems] = useState<SkillsData | null>(null);
 
     useEffect(() => {
         if (data) {
@@ -29,7 +34,5 @@ const Skills = ({ data }) => {
         </section>
     )
 }
-
-
 
 export default Skills

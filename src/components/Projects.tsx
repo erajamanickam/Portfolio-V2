@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { PortfolioData, ProjectData, ProjectItem } from '../types';
 
-const Projects = ({ data }) => {
+interface ProjectsProps {
+    data: PortfolioData | null;
+}
 
-    const [projectItems, setProjectItems] = useState([]);
+const Projects: React.FC<ProjectsProps> = ({ data }) => {
+
+    const [projectItems, setProjectItems] = useState<ProjectData | null>(null);
 
     useEffect(() => {
         if (data) {
@@ -11,21 +16,15 @@ const Projects = ({ data }) => {
         }
     }, [data]);
 
-    const isActive = projectItems?.section_body ? projectItems.section_body.filter(p => p.isActive) : [];
-
-    useEffect(() => {
-        if (isActive.length > 0) {
-            // console.log(isActive);
-        }
-    }, [isActive]);
+    const isActive: ProjectItem[] = projectItems?.section_body ? projectItems.section_body.filter(p => p.isActive) : [];
 
     return (
         <section className="py-12 z-20 relative" id='projects'>
             <div className="container mx-auto px-4 sm:px-6 lg:max-w-6xl lg:px-8">
                 {projectItems && projectItems.section_data && (
                     <>
-                        <h2 className="text-3xl font-bold text-white text-center mb-4 animate__animated animate__jackInTheBox">{projectItems?.section_data?.title }</h2>
-                        <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: projectItems?.section_data?.description  }}></p>
+                        <h2 className="text-3xl font-bold text-white text-center mb-4 animate__animated animate__jackInTheBox">{projectItems?.section_data?.title}</h2>
+                        <p className="text-lg text-gray-300 mb-8 text-center" dangerouslySetInnerHTML={{ __html: projectItems?.section_data?.description }}></p>
                     </>
                 )}
                 <div className="flex flex-wrap -mx-4">
